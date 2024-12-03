@@ -2,5 +2,12 @@
 
 public class Invitee
 {
-    // Should be implemented
+    public long Id { get; set; }
+    public string Email { get; set; }
+    public long MailId { get; set; }
+    public string Subject { get; set; }
+    public string Body { get; set; }
+    public bool IsEmailSent { get; set; } 
+    public bool IsCheck { get; set; } // check servisine gitti mi 
 }
+

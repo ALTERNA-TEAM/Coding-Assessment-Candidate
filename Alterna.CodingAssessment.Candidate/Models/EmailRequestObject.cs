@@ -2,5 +2,16 @@
 
 public class EmailRequestObject
 {
-    // Should be updated according to the service that is given swagger definition necessary
+    public string To { get; set; }
+    public string Subject { get; set; }
+    public string Body { get; set; }
+
+    // Constructor for easy initialization (optional)
+    public EmailRequestObject(string toEmail,string subject, string body)
+    {
+        To = toEmail;
+        Subject = subject;
+        Body = body;
+    }
+
 }

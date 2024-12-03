@@ -1,0 +1,942 @@
+2024-12-03 14:19:02.737 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2024-12-03 14:19:02.819 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2024-12-03 14:19:02.828 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2024-12-03 11:19:02.8246979+00:00');
+SELECT changes();
+2024-12-03 14:19:02.889 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2024-12-03 14:19:02.895 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-12-03 14:19:02.897 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-12-03 14:19:02.905 +03:00 [INF] No migrations were applied. The database is already up to date.
+2024-12-03 14:19:02.908 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2024-12-03 14:19:03.125 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Invitees" AS "i")
+2024-12-03 14:19:03.131 +03:00 [INF] Database already seeded with invitees.
+2024-12-03 14:19:03.240 +03:00 [INF] User profile is available. Using 'C:\Users\sonnu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-03 14:19:03.508 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Body", "i"."Email", "i"."IsCheck", "i"."IsEmailSent", "i"."MailId", "i"."Subject"
+FROM "Invitees" AS "i"
+2024-12-03 14:19:03.524 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Body", "i"."Email", "i"."IsCheck", "i"."IsEmailSent", "i"."MailId", "i"."Subject"
+FROM "Invitees" AS "i"
+WHERE NOT ("i"."IsCheck")
+2024-12-03 14:19:03.533 +03:00 [INF] Now listening on: https://localhost:7057
+2024-12-03 14:19:03.533 +03:00 [INF] Now listening on: http://localhost:5297
+2024-12-03 14:19:03.533 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-03 14:19:03.533 +03:00 [INF] Hosting environment: Development
+2024-12-03 14:19:03.533 +03:00 [INF] Content root path: C:\Users\sonnu\Coding-Assessment-Candidate\Alterna.CodingAssessment.Candidate
+2024-12-03 14:19:03.644 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:19:03.644 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:19:03.648 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:19:03.648 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:19:04.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/swagger/index.html - null null
+2024-12-03 14:19:04.358 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/swagger/index.html - 200 null text/html;charset=utf-8 263.1632ms
+2024-12-03 14:19:04.362 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-12-03 14:19:04.362 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-03 14:19:04.372 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13804 application/javascript; charset=utf-8 10.1554ms
+2024-12-03 14:19:04.399 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.9353ms
+2024-12-03 14:19:04.429 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/swagger/v1/swagger.json - null null
+2024-12-03 14:19:04.515 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.5129ms
+2024-12-03 14:19:06.400 +03:00 [INF] Received HTTP response headers after 2748.4486ms - 200
+2024-12-03 14:19:06.400 +03:00 [INF] Received HTTP response headers after 2748.418ms - 200
+2024-12-03 14:19:06.400 +03:00 [INF] End processing HTTP request after 2761.3408ms - 200
+2024-12-03 14:19:06.400 +03:00 [INF] End processing HTTP request after 2761.4999ms - 200
+2024-12-03 14:19:06.441 +03:00 [INF] JWT token acquired and cached.
+2024-12-03 14:19:06.441 +03:00 [INF] JWT token acquired and cached.
+2024-12-03 14:19:06.451 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:06.451 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/1973
+2024-12-03 14:19:06.451 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:06.451 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/1973
+2024-12-03 14:19:06.851 +03:00 [INF] Received HTTP response headers after 399.5446ms - 200
+2024-12-03 14:19:06.851 +03:00 [INF] End processing HTTP request after 400.4451ms - 200
+2024-12-03 14:19:06.875 +03:00 [INF] Received HTTP response headers after 423.4973ms - 200
+2024-12-03 14:19:06.875 +03:00 [INF] End processing HTTP request after 423.9768ms - 200
+2024-12-03 14:19:06.943 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 162), @p1='?' (Size = 24), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 27)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:06.951 +03:00 [INF] Checked status for Kadin.Miller@hotmail.com
+2024-12-03 14:19:06.951 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/1980
+2024-12-03 14:19:06.951 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/1980
+2024-12-03 14:19:07.004 +03:00 [INF] Received HTTP response headers after 52.9402ms - 200
+2024-12-03 14:19:07.005 +03:00 [INF] End processing HTTP request after 53.5028ms - 200
+2024-12-03 14:19:07.007 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 237), @p1='?' (Size = 17), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 56)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.009 +03:00 [INF] Checked status for Shawna4@yahoo.com
+2024-12-03 14:19:07.009 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/1985
+2024-12-03 14:19:07.009 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/1985
+2024-12-03 14:19:07.070 +03:00 [INF] Received HTTP response headers after 60.9119ms - 200
+2024-12-03 14:19:07.070 +03:00 [INF] End processing HTTP request after 61.3249ms - 200
+2024-12-03 14:19:07.072 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 248), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.076 +03:00 [INF] Checked status for Marquis.Gerlach93@yahoo.com
+2024-12-03 14:19:07.105 +03:00 [INF] Executed DbCommand (166ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 199), @p1='?' (Size = 18), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 25)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.108 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.108 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.161 +03:00 [INF] Received HTTP response headers after 53.1573ms - 400
+2024-12-03 14:19:07.161 +03:00 [INF] End processing HTTP request after 53.8253ms - 400
+2024-12-03 14:19:07.162 +03:00 [ERR] Failed to send email: Bad Request
+2024-12-03 14:19:07.163 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.163 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.242 +03:00 [INF] Received HTTP response headers after 78.4913ms - 200
+2024-12-03 14:19:07.242 +03:00 [INF] End processing HTTP request after 79.0158ms - 200
+2024-12-03 14:19:07.244 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 162), @p1='?' (Size = 18), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 41)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.246 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.247 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.323 +03:00 [INF] Received HTTP response headers after 76.6105ms - 200
+2024-12-03 14:19:07.323 +03:00 [INF] End processing HTTP request after 77.0544ms - 200
+2024-12-03 14:19:07.325 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 205), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 52)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.328 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.328 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.400 +03:00 [INF] Received HTTP response headers after 71.8598ms - 200
+2024-12-03 14:19:07.400 +03:00 [INF] End processing HTTP request after 72.2915ms - 200
+2024-12-03 14:19:07.402 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 212), @p1='?' (Size = 21), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 24)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.404 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.405 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.489 +03:00 [INF] Received HTTP response headers after 84.1912ms - 200
+2024-12-03 14:19:07.489 +03:00 [INF] End processing HTTP request after 84.6018ms - 200
+2024-12-03 14:19:07.491 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 162), @p1='?' (Size = 24), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 27)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.493 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.493 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.582 +03:00 [INF] Received HTTP response headers after 88.7632ms - 200
+2024-12-03 14:19:07.582 +03:00 [INF] End processing HTTP request after 89.0568ms - 200
+2024-12-03 14:19:07.583 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 148), @p1='?' (Size = 26), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 56)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.586 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.586 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.661 +03:00 [INF] Received HTTP response headers after 74.7104ms - 200
+2024-12-03 14:19:07.661 +03:00 [INF] End processing HTTP request after 75.0432ms - 200
+2024-12-03 14:19:07.662 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 184), @p1='?' (Size = 25), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 73)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.664 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.664 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.715 +03:00 [INF] Received HTTP response headers after 50.6714ms - 400
+2024-12-03 14:19:07.715 +03:00 [INF] End processing HTTP request after 50.9597ms - 400
+2024-12-03 14:19:07.715 +03:00 [ERR] Failed to send email: Bad Request
+2024-12-03 14:19:07.716 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.716 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.811 +03:00 [INF] Received HTTP response headers after 95.1787ms - 200
+2024-12-03 14:19:07.812 +03:00 [INF] End processing HTTP request after 95.9224ms - 200
+2024-12-03 14:19:07.814 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 246), @p1='?' (Size = 25), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 47)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.816 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.816 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.887 +03:00 [INF] Received HTTP response headers after 71.3443ms - 200
+2024-12-03 14:19:07.888 +03:00 [INF] End processing HTTP request after 71.7263ms - 200
+2024-12-03 14:19:07.890 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 118), @p1='?' (Size = 25), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 55)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.894 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.894 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.973 +03:00 [INF] Received HTTP response headers after 79.2956ms - 200
+2024-12-03 14:19:07.973 +03:00 [INF] End processing HTTP request after 79.6918ms - 200
+2024-12-03 14:19:07.975 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 288), @p1='?' (Size = 16), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 40)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:07.978 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:07.978 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.052 +03:00 [INF] Received HTTP response headers after 74.2912ms - 200
+2024-12-03 14:19:08.052 +03:00 [INF] End processing HTTP request after 74.7008ms - 200
+2024-12-03 14:19:08.054 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 180), @p1='?' (Size = 19), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 52)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:08.057 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.057 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.145 +03:00 [INF] Received HTTP response headers after 87.8575ms - 200
+2024-12-03 14:19:08.145 +03:00 [INF] End processing HTTP request after 88.4547ms - 200
+2024-12-03 14:19:08.147 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 237), @p1='?' (Size = 17), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 56)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:08.150 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.150 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.227 +03:00 [INF] Received HTTP response headers after 77.0937ms - 200
+2024-12-03 14:19:08.227 +03:00 [INF] End processing HTTP request after 77.3601ms - 200
+2024-12-03 14:19:08.228 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 149), @p1='?' (Size = 16), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 55)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:08.231 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.231 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.307 +03:00 [INF] Received HTTP response headers after 75.8598ms - 200
+2024-12-03 14:19:08.307 +03:00 [INF] End processing HTTP request after 76.2242ms - 200
+2024-12-03 14:19:08.309 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 173), @p1='?' (Size = 24), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 82)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:08.312 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.312 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.390 +03:00 [INF] Received HTTP response headers after 77.9535ms - 200
+2024-12-03 14:19:08.390 +03:00 [INF] End processing HTTP request after 78.3253ms - 200
+2024-12-03 14:19:08.394 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 201), @p1='?' (Size = 20), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 80)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:08.397 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.397 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.450 +03:00 [INF] Received HTTP response headers after 52.6026ms - 400
+2024-12-03 14:19:08.450 +03:00 [INF] End processing HTTP request after 52.9236ms - 400
+2024-12-03 14:19:08.450 +03:00 [ERR] Failed to send email: Bad Request
+2024-12-03 14:19:08.450 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.450 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.542 +03:00 [INF] Received HTTP response headers after 91.4258ms - 200
+2024-12-03 14:19:08.542 +03:00 [INF] End processing HTTP request after 91.6238ms - 200
+2024-12-03 14:19:08.543 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 243), @p1='?' (Size = 24), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:08.545 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.545 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:08.724 +03:00 [INF] Received HTTP response headers after 179.0535ms - 200
+2024-12-03 14:19:08.724 +03:00 [INF] End processing HTTP request after 179.3726ms - 200
+2024-12-03 14:19:08.726 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 248), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:19:15.771 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7057/api/Email/send - application/json 69
+2024-12-03 14:19:15.781 +03:00 [INF] Executing endpoint 'Alterna.CodingAssessment.Candidate.Controllers.EmailController.Send (Alterna.CodingAssessment.Candidate)'
+2024-12-03 14:19:15.808 +03:00 [INF] Route matched with {action = "Send", controller = "Email"}. Executing controller action with signature System.Threading.Tasks.Task`1[Alterna.CodingAssessment.Candidate.Models.EmailSendResponse] Send(Alterna.CodingAssessment.Candidate.Models.EmailSendRequest) on controller Alterna.CodingAssessment.Candidate.Controllers.EmailController (Alterna.CodingAssessment.Candidate).
+2024-12-03 14:19:15.874 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:15.875 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:19:16.034 +03:00 [INF] Received HTTP response headers after 159.351ms - 200
+2024-12-03 14:19:16.034 +03:00 [INF] End processing HTTP request after 159.6938ms - 200
+2024-12-03 14:19:16.035 +03:00 [INF] Mail sent to ghsd@gmail.com with subject: sdfsc
+2024-12-03 14:19:16.045 +03:00 [INF] Executing ObjectResult, writing value of type 'Alterna.CodingAssessment.Candidate.Models.EmailSendResponse'.
+2024-12-03 14:19:16.066 +03:00 [INF] Executed action Alterna.CodingAssessment.Candidate.Controllers.EmailController.Send (Alterna.CodingAssessment.Candidate) in 252.2588ms
+2024-12-03 14:19:16.066 +03:00 [INF] Executed endpoint 'Alterna.CodingAssessment.Candidate.Controllers.EmailController.Send (Alterna.CodingAssessment.Candidate)'
+2024-12-03 14:19:16.067 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7057/api/Email/send - 200 null application/json; charset=utf-8 295.473ms
+2024-12-03 14:19:25.094 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/api/Email/2003 - null null
+2024-12-03 14:19:25.095 +03:00 [INF] Executing endpoint 'Alterna.CodingAssessment.Candidate.Controllers.EmailController.Check (Alterna.CodingAssessment.Candidate)'
+2024-12-03 14:19:25.101 +03:00 [INF] Route matched with {action = "Check", controller = "Email"}. Executing controller action with signature System.Threading.Tasks.Task`1[Alterna.CodingAssessment.Candidate.Models.CheckMailResponse] Check(Int32) on controller Alterna.CodingAssessment.Candidate.Controllers.EmailController (Alterna.CodingAssessment.Candidate).
+2024-12-03 14:19:25.105 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/2003
+2024-12-03 14:19:25.105 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/2003
+2024-12-03 14:19:25.173 +03:00 [INF] Received HTTP response headers after 68.2867ms - 200
+2024-12-03 14:19:25.173 +03:00 [INF] End processing HTTP request after 68.5283ms - 200
+2024-12-03 14:19:25.175 +03:00 [INF] Executing ObjectResult, writing value of type 'Alterna.CodingAssessment.Candidate.Models.CheckMailResponse'.
+2024-12-03 14:19:25.177 +03:00 [INF] Executed action Alterna.CodingAssessment.Candidate.Controllers.EmailController.Check (Alterna.CodingAssessment.Candidate) in 75.6369ms
+2024-12-03 14:19:25.177 +03:00 [INF] Executed endpoint 'Alterna.CodingAssessment.Candidate.Controllers.EmailController.Check (Alterna.CodingAssessment.Candidate)'
+2024-12-03 14:19:25.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/api/Email/2003 - 200 null application/json; charset=utf-8 82.7635ms
+2024-12-03 14:21:35.398 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2024-12-03 14:21:35.459 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2024-12-03 14:21:35.474 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2024-12-03 11:21:35.4648972+00:00');
+SELECT changes();
+2024-12-03 14:21:35.538 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2024-12-03 14:21:35.544 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-12-03 14:21:35.546 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-12-03 14:21:35.556 +03:00 [INF] No migrations were applied. The database is already up to date.
+2024-12-03 14:21:35.566 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2024-12-03 14:21:35.774 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Invitees" AS "i")
+2024-12-03 14:21:35.781 +03:00 [INF] Database already seeded with invitees.
+2024-12-03 14:21:35.899 +03:00 [INF] User profile is available. Using 'C:\Users\sonnu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-03 14:21:36.186 +03:00 [INF] Now listening on: https://localhost:7057
+2024-12-03 14:21:36.186 +03:00 [INF] Now listening on: http://localhost:5297
+2024-12-03 14:21:36.187 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-03 14:21:36.187 +03:00 [INF] Hosting environment: Development
+2024-12-03 14:21:36.187 +03:00 [INF] Content root path: C:\Users\sonnu\Coding-Assessment-Candidate\Alterna.CodingAssessment.Candidate
+2024-12-03 14:21:36.188 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Body", "i"."Email", "i"."IsCheck", "i"."IsEmailSent", "i"."MailId", "i"."Subject"
+FROM "Invitees" AS "i"
+2024-12-03 14:21:36.204 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Body", "i"."Email", "i"."IsCheck", "i"."IsEmailSent", "i"."MailId", "i"."Subject"
+FROM "Invitees" AS "i"
+WHERE NOT ("i"."IsCheck")
+2024-12-03 14:21:36.314 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:21:36.314 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:21:36.317 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:21:36.317 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:21:36.627 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/swagger/index.html - null null
+2024-12-03 14:21:36.802 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/swagger/index.html - 200 null text/html;charset=utf-8 184.1277ms
+2024-12-03 14:21:36.863 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-03 14:21:36.866 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-12-03 14:21:36.881 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13804 application/javascript; charset=utf-8 18.4798ms
+2024-12-03 14:21:36.939 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.4414ms
+2024-12-03 14:21:37.043 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/swagger/v1/swagger.json - null null
+2024-12-03 14:21:37.135 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 94.0293ms
+2024-12-03 14:21:40.407 +03:00 [INF] Received HTTP response headers after 4086.4498ms - 200
+2024-12-03 14:21:40.408 +03:00 [INF] End processing HTTP request after 4098.225ms - 200
+2024-12-03 14:21:40.429 +03:00 [INF] Received HTTP response headers after 4111.9764ms - 200
+2024-12-03 14:21:40.429 +03:00 [INF] End processing HTTP request after 4119.643ms - 200
+2024-12-03 14:21:40.440 +03:00 [INF] JWT token acquired and cached.
+2024-12-03 14:21:40.440 +03:00 [INF] JWT token acquired and cached.
+2024-12-03 14:21:40.448 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:40.448 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:40.448 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/1990
+2024-12-03 14:21:40.448 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/1990
+2024-12-03 14:21:40.507 +03:00 [INF] Received HTTP response headers after 58.4333ms - 200
+2024-12-03 14:21:40.508 +03:00 [INF] End processing HTTP request after 60.1708ms - 200
+2024-12-03 14:21:40.557 +03:00 [INF] Received HTTP response headers after 108.3183ms - 200
+2024-12-03 14:21:40.557 +03:00 [INF] End processing HTTP request after 108.7859ms - 200
+2024-12-03 14:21:40.583 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 162), @p1='?' (Size = 24), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 27)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:40.591 +03:00 [INF] Checked status for Kadin.Miller@hotmail.com
+2024-12-03 14:21:40.591 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/1997
+2024-12-03 14:21:40.591 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/1997
+2024-12-03 14:21:40.645 +03:00 [INF] Received HTTP response headers after 54.0425ms - 200
+2024-12-03 14:21:40.645 +03:00 [INF] End processing HTTP request after 54.4088ms - 200
+2024-12-03 14:21:40.648 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 237), @p1='?' (Size = 17), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 56)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:40.652 +03:00 [INF] Checked status for Shawna4@yahoo.com
+2024-12-03 14:21:40.652 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/2002
+2024-12-03 14:21:40.652 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/2002
+2024-12-03 14:21:40.710 +03:00 [INF] Received HTTP response headers after 57.7548ms - 200
+2024-12-03 14:21:40.711 +03:00 [INF] End processing HTTP request after 58.3262ms - 200
+2024-12-03 14:21:40.712 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 248), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:40.715 +03:00 [INF] Checked status for Marquis.Gerlach93@yahoo.com
+2024-12-03 14:21:40.739 +03:00 [INF] Executed DbCommand (160ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 199), @p1='?' (Size = 18), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 25)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:40.741 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:40.741 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:40.802 +03:00 [INF] Received HTTP response headers after 60.5391ms - 400
+2024-12-03 14:21:40.802 +03:00 [INF] End processing HTTP request after 61.2613ms - 400
+2024-12-03 14:21:40.803 +03:00 [ERR] Failed to send email: Bad Request
+2024-12-03 14:21:40.803 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:40.803 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:40.896 +03:00 [INF] Received HTTP response headers after 93.2832ms - 200
+2024-12-03 14:21:40.897 +03:00 [INF] End processing HTTP request after 93.8289ms - 200
+2024-12-03 14:21:40.898 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 162), @p1='?' (Size = 18), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 41)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:40.902 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:40.902 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:40.992 +03:00 [INF] Received HTTP response headers after 89.231ms - 200
+2024-12-03 14:21:40.992 +03:00 [INF] End processing HTTP request after 89.7286ms - 200
+2024-12-03 14:21:40.994 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 205), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 52)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:41.002 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.002 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.083 +03:00 [INF] Received HTTP response headers after 80.1875ms - 200
+2024-12-03 14:21:41.083 +03:00 [INF] End processing HTTP request after 80.7118ms - 200
+2024-12-03 14:21:41.084 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 212), @p1='?' (Size = 21), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 24)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:41.089 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.089 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.175 +03:00 [INF] Received HTTP response headers after 85.5337ms - 200
+2024-12-03 14:21:41.175 +03:00 [INF] End processing HTTP request after 86.0369ms - 200
+2024-12-03 14:21:41.177 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 162), @p1='?' (Size = 24), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 27)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:41.179 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.179 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.259 +03:00 [INF] Received HTTP response headers after 80.181ms - 200
+2024-12-03 14:21:41.259 +03:00 [INF] End processing HTTP request after 80.6561ms - 200
+2024-12-03 14:21:41.261 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 148), @p1='?' (Size = 26), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 56)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:41.264 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.264 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.355 +03:00 [INF] Received HTTP response headers after 90.4072ms - 200
+2024-12-03 14:21:41.355 +03:00 [INF] End processing HTTP request after 90.9652ms - 200
+2024-12-03 14:21:41.359 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 184), @p1='?' (Size = 25), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 73)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:41.364 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.364 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.450 +03:00 [INF] Received HTTP response headers after 85.9059ms - 200
+2024-12-03 14:21:41.450 +03:00 [INF] End processing HTTP request after 86.3217ms - 200
+2024-12-03 14:21:41.451 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 109), @p1='?' (Size = 25), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 41)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:41.461 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.461 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.552 +03:00 [INF] Received HTTP response headers after 90.8642ms - 200
+2024-12-03 14:21:41.552 +03:00 [INF] End processing HTTP request after 91.2675ms - 200
+2024-12-03 14:21:41.553 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 246), @p1='?' (Size = 25), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 47)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:41.556 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.556 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.615 +03:00 [INF] Received HTTP response headers after 59.4165ms - 400
+2024-12-03 14:21:41.616 +03:00 [INF] End processing HTTP request after 60.4121ms - 400
+2024-12-03 14:21:41.616 +03:00 [ERR] Failed to send email: Bad Request
+2024-12-03 14:21:41.617 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.617 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.701 +03:00 [INF] Received HTTP response headers after 83.8559ms - 200
+2024-12-03 14:21:41.701 +03:00 [INF] End processing HTTP request after 84.3971ms - 200
+2024-12-03 14:21:41.703 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 288), @p1='?' (Size = 16), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 40)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:41.708 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.708 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.794 +03:00 [INF] Received HTTP response headers after 85.0907ms - 200
+2024-12-03 14:21:41.794 +03:00 [INF] End processing HTTP request after 85.6446ms - 200
+2024-12-03 14:21:41.796 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 180), @p1='?' (Size = 19), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 52)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:41.803 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.803 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.905 +03:00 [INF] Received HTTP response headers after 101.8278ms - 200
+2024-12-03 14:21:41.905 +03:00 [INF] End processing HTTP request after 102.4853ms - 200
+2024-12-03 14:21:41.906 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 237), @p1='?' (Size = 17), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 56)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:41.910 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.910 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:41.993 +03:00 [INF] Received HTTP response headers after 83.0762ms - 200
+2024-12-03 14:21:41.993 +03:00 [INF] End processing HTTP request after 83.4706ms - 200
+2024-12-03 14:21:41.995 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 149), @p1='?' (Size = 16), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 55)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:42.004 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:42.004 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:42.058 +03:00 [INF] Received HTTP response headers after 54.4495ms - 400
+2024-12-03 14:21:42.059 +03:00 [INF] End processing HTTP request after 54.9552ms - 400
+2024-12-03 14:21:42.059 +03:00 [ERR] Failed to send email: Bad Request
+2024-12-03 14:21:42.059 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:42.059 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:42.156 +03:00 [INF] Received HTTP response headers after 96.1706ms - 200
+2024-12-03 14:21:42.156 +03:00 [INF] End processing HTTP request after 96.7993ms - 200
+2024-12-03 14:21:42.158 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 201), @p1='?' (Size = 20), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 80)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:42.163 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:42.163 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:42.257 +03:00 [INF] Received HTTP response headers after 93.4572ms - 200
+2024-12-03 14:21:42.257 +03:00 [INF] End processing HTTP request after 94.4798ms - 200
+2024-12-03 14:21:42.259 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 249), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 57)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:42.265 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:42.265 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:42.352 +03:00 [INF] Received HTTP response headers after 87.4114ms - 200
+2024-12-03 14:21:42.353 +03:00 [INF] End processing HTTP request after 87.9366ms - 200
+2024-12-03 14:21:42.354 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 243), @p1='?' (Size = 24), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:42.359 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:42.359 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:42.440 +03:00 [INF] Received HTTP response headers after 80.2627ms - 200
+2024-12-03 14:21:42.440 +03:00 [INF] End processing HTTP request after 80.7651ms - 200
+2024-12-03 14:21:42.442 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 248), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:21:53.308 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7057/api/Email/send - application/json 68
+2024-12-03 14:21:53.318 +03:00 [INF] Executing endpoint 'Alterna.CodingAssessment.Candidate.Controllers.EmailController.Send (Alterna.CodingAssessment.Candidate)'
+2024-12-03 14:21:53.341 +03:00 [INF] Route matched with {action = "Send", controller = "Email"}. Executing controller action with signature System.Threading.Tasks.Task`1[Alterna.CodingAssessment.Candidate.Models.EmailSendResponse] Send(Alterna.CodingAssessment.Candidate.Models.EmailSendRequest) on controller Alterna.CodingAssessment.Candidate.Controllers.EmailController (Alterna.CodingAssessment.Candidate).
+2024-12-03 14:21:53.391 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:53.391 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:21:53.474 +03:00 [INF] Received HTTP response headers after 82.5413ms - 200
+2024-12-03 14:21:53.474 +03:00 [INF] End processing HTTP request after 82.9789ms - 200
+2024-12-03 14:21:53.475 +03:00 [INF] Mail sent to bcvzx@gmail.com with subject: xfvx
+2024-12-03 14:21:53.481 +03:00 [INF] Executing ObjectResult, writing value of type 'Alterna.CodingAssessment.Candidate.Models.EmailSendResponse'.
+2024-12-03 14:21:53.498 +03:00 [INF] Executed action Alterna.CodingAssessment.Candidate.Controllers.EmailController.Send (Alterna.CodingAssessment.Candidate) in 152.439ms
+2024-12-03 14:21:53.499 +03:00 [INF] Executed endpoint 'Alterna.CodingAssessment.Candidate.Controllers.EmailController.Send (Alterna.CodingAssessment.Candidate)'
+2024-12-03 14:21:53.500 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7057/api/Email/send - 200 null application/json; charset=utf-8 191.527ms
+2024-12-03 14:22:18.708 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-12-03 14:22:18.752 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2024-12-03 14:22:18.758 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2024-12-03 14:22:18.762 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsLock" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK___EFMigrationsLock" PRIMARY KEY,
+    "Timestamp" TEXT NOT NULL
+);
+2024-12-03 14:22:18.765 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2024-12-03 11:22:18.7628497+00:00');
+SELECT changes();
+2024-12-03 14:22:18.823 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2024-12-03 14:22:18.833 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-12-03 14:22:18.835 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-12-03 14:22:18.857 +03:00 [INF] Applying migration '20241203105554_mg_invitee'.
+2024-12-03 14:22:18.867 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Invitees" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Invitees" PRIMARY KEY AUTOINCREMENT,
+    "Email" TEXT NOT NULL,
+    "MailId" INTEGER NOT NULL,
+    "Subject" TEXT NOT NULL,
+    "Body" TEXT NOT NULL,
+    "IsEmailSent" INTEGER NOT NULL,
+    "IsCheck" INTEGER NOT NULL
+);
+2024-12-03 14:22:18.867 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241203105554_mg_invitee', '9.0.0');
+2024-12-03 14:22:18.874 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2024-12-03 14:22:19.079 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Invitees" AS "i")
+2024-12-03 14:22:19.260 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 236), @p1='?' (Size = 24), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 28)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.268 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 187), @p1='?' (Size = 16), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 68)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.269 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 309), @p1='?' (Size = 20), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.269 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 239), @p1='?' (Size = 24), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 79)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.269 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 239), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 61)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.269 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 102), @p1='?' (Size = 22), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.269 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 82), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 53)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.269 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 110), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 38)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.269 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 121), @p1='?' (Size = 26), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.269 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 233), @p1='?' (Size = 23), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 30)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.270 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 305), @p1='?' (Size = 20), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 31)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.270 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 201), @p1='?' (Size = 25), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 34)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.270 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 139), @p1='?' (Size = 30), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 53)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.270 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 137), @p1='?' (Size = 28), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 75)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.270 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 313), @p1='?' (Size = 16), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 53)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.270 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 341), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 68)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.270 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 375), @p1='?' (Size = 20), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 52)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.270 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 214), @p1='?' (Size = 21), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 67)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.270 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 312), @p1='?' (Size = 29), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 40)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.271 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 261), @p1='?' (Size = 18), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 72)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invitees" ("Body", "Email", "IsCheck", "IsEmailSent", "MailId", "Subject")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2024-12-03 14:22:19.285 +03:00 [INF] Successfully seeded 20 invitees.
+2024-12-03 14:22:19.401 +03:00 [INF] User profile is available. Using 'C:\Users\sonnu\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-03 14:22:19.635 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Body", "i"."Email", "i"."IsCheck", "i"."IsEmailSent", "i"."MailId", "i"."Subject"
+FROM "Invitees" AS "i"
+2024-12-03 14:22:19.646 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Body", "i"."Email", "i"."IsCheck", "i"."IsEmailSent", "i"."MailId", "i"."Subject"
+FROM "Invitees" AS "i"
+WHERE NOT ("i"."IsCheck")
+2024-12-03 14:22:19.657 +03:00 [INF] Now listening on: https://localhost:7057
+2024-12-03 14:22:19.657 +03:00 [INF] Now listening on: http://localhost:5297
+2024-12-03 14:22:19.657 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-03 14:22:19.658 +03:00 [INF] Hosting environment: Development
+2024-12-03 14:22:19.658 +03:00 [INF] Content root path: C:\Users\sonnu\Coding-Assessment-Candidate\Alterna.CodingAssessment.Candidate
+2024-12-03 14:22:19.740 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:22:19.740 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:22:19.743 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:22:19.743 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/token
+2024-12-03 14:22:20.220 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/swagger/index.html - null null
+2024-12-03 14:22:20.269 +03:00 [INF] Received HTTP response headers after 522.6445ms - 200
+2024-12-03 14:22:20.269 +03:00 [INF] Received HTTP response headers after 522.7219ms - 200
+2024-12-03 14:22:20.269 +03:00 [INF] End processing HTTP request after 534.4023ms - 200
+2024-12-03 14:22:20.269 +03:00 [INF] End processing HTTP request after 534.2491ms - 200
+2024-12-03 14:22:20.292 +03:00 [INF] JWT token acquired and cached.
+2024-12-03 14:22:20.292 +03:00 [INF] JWT token acquired and cached.
+2024-12-03 14:22:20.301 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.301 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.301 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.301 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.399 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/swagger/index.html - 200 null text/html;charset=utf-8 185.3619ms
+2024-12-03 14:22:20.405 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-03 14:22:20.406 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-12-03 14:22:20.413 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13804 application/javascript; charset=utf-8 8.1009ms
+2024-12-03 14:22:20.423 +03:00 [INF] Received HTTP response headers after 121.8031ms - 400
+2024-12-03 14:22:20.424 +03:00 [INF] End processing HTTP request after 122.3997ms - 400
+2024-12-03 14:22:20.425 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:20.426 +03:00 [INF] Checked status for Virgie.Stark@hotmail.com
+2024-12-03 14:22:20.426 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.426 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.447 +03:00 [INF] Received HTTP response headers after 145.5117ms - 200
+2024-12-03 14:22:20.448 +03:00 [INF] End processing HTTP request after 146.4349ms - 200
+2024-12-03 14:22:20.449 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.6904ms
+2024-12-03 14:22:20.458 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 236), @p1='?' (Size = 24), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 28)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:20.460 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.460 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.490 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/swagger/v1/swagger.json - null null
+2024-12-03 14:22:20.554 +03:00 [INF] Received HTTP response headers after 94.3071ms - 400
+2024-12-03 14:22:20.554 +03:00 [INF] Received HTTP response headers after 128.3859ms - 400
+2024-12-03 14:22:20.555 +03:00 [INF] End processing HTTP request after 128.7255ms - 400
+2024-12-03 14:22:20.555 +03:00 [INF] End processing HTTP request after 94.587ms - 400
+2024-12-03 14:22:20.555 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:20.555 +03:00 [INF] Checked status for Nikki6@yahoo.com
+2024-12-03 14:22:20.555 +03:00 [ERR] Failed to send email: Bad Request
+2024-12-03 14:22:20.555 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.555 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.555 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.555 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.581 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.998ms
+2024-12-03 14:22:20.675 +03:00 [INF] Received HTTP response headers after 119.4462ms - 400
+2024-12-03 14:22:20.675 +03:00 [INF] End processing HTTP request after 119.8858ms - 400
+2024-12-03 14:22:20.675 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:20.675 +03:00 [INF] Checked status for Alice.Lind@yahoo.com
+2024-12-03 14:22:20.675 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.675 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.688 +03:00 [INF] Received HTTP response headers after 132.9659ms - 200
+2024-12-03 14:22:20.688 +03:00 [INF] End processing HTTP request after 133.4018ms - 200
+2024-12-03 14:22:20.690 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 309), @p1='?' (Size = 20), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:20.691 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.691 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.823 +03:00 [INF] Received HTTP response headers after 148.1398ms - 400
+2024-12-03 14:22:20.824 +03:00 [INF] End processing HTTP request after 148.4224ms - 400
+2024-12-03 14:22:20.824 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:20.824 +03:00 [INF] Checked status for Gerald.Bruen36@gmail.com
+2024-12-03 14:22:20.824 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.824 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.843 +03:00 [INF] Received HTTP response headers after 152.3984ms - 200
+2024-12-03 14:22:20.844 +03:00 [INF] End processing HTTP request after 152.7586ms - 200
+2024-12-03 14:22:20.845 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 239), @p1='?' (Size = 24), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 79)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:20.851 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.851 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.886 +03:00 [INF] Received HTTP response headers after 61.682ms - 400
+2024-12-03 14:22:20.886 +03:00 [INF] End processing HTTP request after 61.9693ms - 400
+2024-12-03 14:22:20.886 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:20.886 +03:00 [INF] Checked status for Leland_Becker28@hotmail.com
+2024-12-03 14:22:20.886 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.886 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.925 +03:00 [INF] Received HTTP response headers after 74.0612ms - 200
+2024-12-03 14:22:20.926 +03:00 [INF] End processing HTTP request after 74.6009ms - 200
+2024-12-03 14:22:20.927 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 239), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 61)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:20.929 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.929 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:20.943 +03:00 [INF] Received HTTP response headers after 56.1162ms - 400
+2024-12-03 14:22:20.943 +03:00 [INF] End processing HTTP request after 56.4518ms - 400
+2024-12-03 14:22:20.943 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:20.943 +03:00 [INF] Checked status for Dee.Herzog96@yahoo.com
+2024-12-03 14:22:20.943 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:20.943 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.015 +03:00 [INF] Received HTTP response headers after 86.1694ms - 200
+2024-12-03 14:22:21.015 +03:00 [INF] End processing HTTP request after 86.5998ms - 200
+2024-12-03 14:22:21.017 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 102), @p1='?' (Size = 22), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:21.022 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.022 +03:00 [INF] Received HTTP response headers after 78.6147ms - 400
+2024-12-03 14:22:21.022 +03:00 [INF] End processing HTTP request after 78.9951ms - 400
+2024-12-03 14:22:21.022 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.022 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:21.023 +03:00 [INF] Checked status for Madilyn.Aufderhar@gmail.com
+2024-12-03 14:22:21.023 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.023 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.204 +03:00 [INF] Received HTTP response headers after 182.0566ms - 200
+2024-12-03 14:22:21.205 +03:00 [INF] End processing HTTP request after 182.9982ms - 200
+2024-12-03 14:22:21.205 +03:00 [INF] Received HTTP response headers after 181.8732ms - 400
+2024-12-03 14:22:21.205 +03:00 [INF] End processing HTTP request after 182.3527ms - 400
+2024-12-03 14:22:21.207 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 82), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 53)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:21.209 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:21.209 +03:00 [INF] Checked status for Elise.Marquardt36@gmail.com
+2024-12-03 14:22:21.209 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.209 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.216 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.216 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.264 +03:00 [INF] Received HTTP response headers after 54.5236ms - 400
+2024-12-03 14:22:21.264 +03:00 [INF] End processing HTTP request after 54.8309ms - 400
+2024-12-03 14:22:21.264 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:21.264 +03:00 [INF] Checked status for Weston.Mertz78@hotmail.com
+2024-12-03 14:22:21.265 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.265 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.292 +03:00 [INF] Received HTTP response headers after 76.6026ms - 200
+2024-12-03 14:22:21.293 +03:00 [INF] End processing HTTP request after 77.0251ms - 200
+2024-12-03 14:22:21.295 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 110), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 38)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:21.301 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.301 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.346 +03:00 [INF] Received HTTP response headers after 81.3824ms - 400
+2024-12-03 14:22:21.346 +03:00 [INF] End processing HTTP request after 81.7144ms - 400
+2024-12-03 14:22:21.346 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:21.347 +03:00 [INF] Checked status for Juliet.Ratke6@yahoo.com
+2024-12-03 14:22:21.347 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.347 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.359 +03:00 [INF] Received HTTP response headers after 58.0583ms - 400
+2024-12-03 14:22:21.359 +03:00 [INF] End processing HTTP request after 58.3743ms - 400
+2024-12-03 14:22:21.359 +03:00 [ERR] Failed to send email: Bad Request
+2024-12-03 14:22:21.360 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.360 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.408 +03:00 [INF] Received HTTP response headers after 60.9269ms - 400
+2024-12-03 14:22:21.408 +03:00 [INF] End processing HTTP request after 61.5003ms - 400
+2024-12-03 14:22:21.408 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:21.408 +03:00 [INF] Checked status for Myriam27@hotmail.com
+2024-12-03 14:22:21.409 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.409 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.444 +03:00 [INF] Received HTTP response headers after 84.1076ms - 200
+2024-12-03 14:22:21.444 +03:00 [INF] End processing HTTP request after 84.4392ms - 200
+2024-12-03 14:22:21.446 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 233), @p1='?' (Size = 23), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 30)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:21.453 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.453 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.481 +03:00 [INF] Received HTTP response headers after 72.0704ms - 400
+2024-12-03 14:22:21.481 +03:00 [INF] End processing HTTP request after 72.3491ms - 400
+2024-12-03 14:22:21.481 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:21.481 +03:00 [INF] Checked status for Brenda_Kemmer@hotmail.com
+2024-12-03 14:22:21.481 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.481 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.541 +03:00 [INF] Received HTTP response headers after 60.1595ms - 400
+2024-12-03 14:22:21.541 +03:00 [INF] Received HTTP response headers after 87.9775ms - 200
+2024-12-03 14:22:21.541 +03:00 [INF] End processing HTTP request after 88.3271ms - 200
+2024-12-03 14:22:21.541 +03:00 [INF] End processing HTTP request after 60.3177ms - 400
+2024-12-03 14:22:21.542 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:21.542 +03:00 [INF] Checked status for Odessa_Satterfield83@gmail.com
+2024-12-03 14:22:21.542 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.542 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.544 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 305), @p1='?' (Size = 20), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 31)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:21.555 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.555 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.900 +03:00 [INF] Received HTTP response headers after 357.6038ms - 400
+2024-12-03 14:22:21.900 +03:00 [INF] End processing HTTP request after 357.9295ms - 400
+2024-12-03 14:22:21.900 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:21.900 +03:00 [INF] Checked status for Michele_Gislason35@gmail.com
+2024-12-03 14:22:21.900 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.900 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.948 +03:00 [INF] Received HTTP response headers after 392.4854ms - 200
+2024-12-03 14:22:21.948 +03:00 [INF] End processing HTTP request after 392.8739ms - 200
+2024-12-03 14:22:21.950 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 201), @p1='?' (Size = 25), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 34)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:21.956 +03:00 [INF] Received HTTP response headers after 55.6632ms - 400
+2024-12-03 14:22:21.956 +03:00 [INF] End processing HTTP request after 55.939ms - 400
+2024-12-03 14:22:21.956 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:21.956 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.956 +03:00 [INF] Checked status for Finn14@yahoo.com
+2024-12-03 14:22:21.956 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:21.957 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:21.957 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:22.015 +03:00 [INF] Received HTTP response headers after 57.8805ms - 400
+2024-12-03 14:22:22.015 +03:00 [INF] End processing HTTP request after 58.2935ms - 400
+2024-12-03 14:22:22.015 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:22.015 +03:00 [INF] Checked status for Carolyn.Lueilwitz@gmail.com
+2024-12-03 14:22:22.015 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:22.015 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:22.049 +03:00 [INF] Received HTTP response headers after 92.2174ms - 200
+2024-12-03 14:22:22.049 +03:00 [INF] End processing HTTP request after 92.9631ms - 200
+2024-12-03 14:22:22.051 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 139), @p1='?' (Size = 30), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 53)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:22.055 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.055 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.069 +03:00 [INF] Received HTTP response headers after 53.2014ms - 400
+2024-12-03 14:22:22.069 +03:00 [INF] End processing HTTP request after 53.5489ms - 400
+2024-12-03 14:22:22.069 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:22.069 +03:00 [INF] Checked status for Emely_Wolf@gmail.com
+2024-12-03 14:22:22.070 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:22.070 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:22.135 +03:00 [INF] Received HTTP response headers after 80.0027ms - 200
+2024-12-03 14:22:22.135 +03:00 [INF] End processing HTTP request after 80.9598ms - 200
+2024-12-03 14:22:22.136 +03:00 [INF] Received HTTP response headers after 66.347ms - 400
+2024-12-03 14:22:22.136 +03:00 [INF] End processing HTTP request after 66.6365ms - 400
+2024-12-03 14:22:22.136 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:22.136 +03:00 [INF] Checked status for Daren.Huel7@gmail.com
+2024-12-03 14:22:22.137 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:22.137 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:22.140 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 137), @p1='?' (Size = 28), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 75)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:22.150 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.150 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.191 +03:00 [INF] Received HTTP response headers after 54.0738ms - 400
+2024-12-03 14:22:22.191 +03:00 [INF] End processing HTTP request after 54.5114ms - 400
+2024-12-03 14:22:22.191 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:22.191 +03:00 [INF] Checked status for Aliya.Considine16@hotmail.com
+2024-12-03 14:22:22.192 +03:00 [INF] Start processing HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:22.192 +03:00 [INF] Sending HTTP request GET https://coding-assessment.alternacx.com/api/check/0
+2024-12-03 14:22:22.203 +03:00 [INF] Received HTTP response headers after 52.4316ms - 400
+2024-12-03 14:22:22.203 +03:00 [INF] End processing HTTP request after 52.8309ms - 400
+2024-12-03 14:22:22.203 +03:00 [ERR] Failed to send email: Bad Request
+2024-12-03 14:22:22.203 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.203 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.248 +03:00 [INF] Received HTTP response headers after 56.6416ms - 400
+2024-12-03 14:22:22.249 +03:00 [INF] End processing HTTP request after 57.0834ms - 400
+2024-12-03 14:22:22.249 +03:00 [ERR] Failed to check mail status: Bad Request
+2024-12-03 14:22:22.249 +03:00 [INF] Checked status for Emelie49@yahoo.com
+2024-12-03 14:22:22.290 +03:00 [INF] Received HTTP response headers after 87.0131ms - 200
+2024-12-03 14:22:22.291 +03:00 [INF] End processing HTTP request after 87.4058ms - 200
+2024-12-03 14:22:22.299 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 341), @p1='?' (Size = 27), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 68)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:22.304 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.304 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.378 +03:00 [INF] Received HTTP response headers after 73.5378ms - 200
+2024-12-03 14:22:22.378 +03:00 [INF] End processing HTTP request after 74.1785ms - 200
+2024-12-03 14:22:22.382 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 375), @p1='?' (Size = 20), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 52)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:22.386 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.386 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.467 +03:00 [INF] Received HTTP response headers after 80.8076ms - 200
+2024-12-03 14:22:22.468 +03:00 [INF] End processing HTTP request after 81.9487ms - 200
+2024-12-03 14:22:22.469 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 214), @p1='?' (Size = 21), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 67)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:22.474 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.474 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.555 +03:00 [INF] Received HTTP response headers after 81.2899ms - 200
+2024-12-03 14:22:22.555 +03:00 [INF] End processing HTTP request after 81.7025ms - 200
+2024-12-03 14:22:22.557 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 312), @p1='?' (Size = 29), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 40)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:22.563 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.563 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:22.655 +03:00 [INF] Received HTTP response headers after 91.0662ms - 200
+2024-12-03 14:22:22.655 +03:00 [INF] End processing HTTP request after 91.5265ms - 200
+2024-12-03 14:22:22.657 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int64), @p0='?' (Size = 261), @p1='?' (Size = 18), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int64), @p5='?' (Size = 72)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Invitees" SET "Body" = @p0, "Email" = @p1, "IsCheck" = @p2, "IsEmailSent" = @p3, "MailId" = @p4, "Subject" = @p5
+WHERE "Id" = @p6
+RETURNING 1;
+2024-12-03 14:22:31.336 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7057/api/Email/send - application/json 65
+2024-12-03 14:22:31.346 +03:00 [INF] Executing endpoint 'Alterna.CodingAssessment.Candidate.Controllers.EmailController.Send (Alterna.CodingAssessment.Candidate)'
+2024-12-03 14:22:31.375 +03:00 [INF] Route matched with {action = "Send", controller = "Email"}. Executing controller action with signature System.Threading.Tasks.Task`1[Alterna.CodingAssessment.Candidate.Models.EmailSendResponse] Send(Alterna.CodingAssessment.Candidate.Models.EmailSendRequest) on controller Alterna.CodingAssessment.Candidate.Controllers.EmailController (Alterna.CodingAssessment.Candidate).
+2024-12-03 14:22:31.427 +03:00 [INF] Start processing HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:31.427 +03:00 [INF] Sending HTTP request POST https://coding-assessment.alternacx.com/api/send
+2024-12-03 14:22:31.502 +03:00 [INF] Received HTTP response headers after 75.2137ms - 200
+2024-12-03 14:22:31.502 +03:00 [INF] End processing HTTP request after 75.6616ms - 200
+2024-12-03 14:22:31.505 +03:00 [INF] Mail sent to cvvb@gmail.com with subject: sdd
+2024-12-03 14:22:31.515 +03:00 [INF] Executing ObjectResult, writing value of type 'Alterna.CodingAssessment.Candidate.Models.EmailSendResponse'.
+2024-12-03 14:22:31.531 +03:00 [INF] Executed action Alterna.CodingAssessment.Candidate.Controllers.EmailController.Send (Alterna.CodingAssessment.Candidate) in 151.4833ms
+2024-12-03 14:22:31.531 +03:00 [INF] Executed endpoint 'Alterna.CodingAssessment.Candidate.Controllers.EmailController.Send (Alterna.CodingAssessment.Candidate)'
+2024-12-03 14:22:31.532 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7057/api/Email/send - 200 null application/json; charset=utf-8 196.1391ms
