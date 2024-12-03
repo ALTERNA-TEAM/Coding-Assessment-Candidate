@@ -15,8 +15,12 @@ using System.Text.Json;
 var builder = WebApplication.CreateBuilder(args);
 
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.File("logs\\log.txt", rollingInterval: RollingInterval.Day)
+    .MinimumLevel.Information()
+    .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
+
+builder.Host.UseSerilog();
+
 builder.Services.AddSingleton(Log.Logger);
 
 builder.Services.AddDbContext<ApiDbContext>(options =>
@@ -34,6 +38,7 @@ builder.Services.AddHttpClient<IMailService, MailService>(client =>
     client.BaseAddress = new Uri(builder.Configuration["MailService:ApiBaseUrl"]);
 });
 
+builder.Services.AddRazorPages();
 
 builder.Services.Configure<ApiServicesSettingsObject>(builder.Configuration.GetSection("MailService"));
 
@@ -52,6 +57,12 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+//Auto migrate
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApiDbContext>();
+    dbContext.Database.Migrate();
+}
 
 //Random 20 value 
 using (var scope = app.Services.CreateScope())

@@ -7,5 +7,7 @@ public class Invitee
     public long MailId { get; set; }
     public string Subject { get; set; }
     public string Body { get; set; }
-    public bool IsEmailSent { get; set; } // To track email status
+    public bool IsEmailSent { get; set; } 
+    public bool IsCheck { get; set; } // check servisine gitti mi 
 }
+

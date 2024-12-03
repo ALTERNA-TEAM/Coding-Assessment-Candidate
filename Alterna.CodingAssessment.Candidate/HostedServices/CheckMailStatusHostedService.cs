@@ -29,12 +29,20 @@ namespace Alterna.CodingAssessment.Candidate.HostedServices
                 var dbContext = scope.ServiceProvider.GetRequiredService<ApiDbContext>();
                 var mailService = scope.ServiceProvider.GetRequiredService<IMailService>();
 
-                var invitees = await dbContext.Invitees.ToListAsync(cancellationToken);
+                var invitees = await dbContext.Invitees.Where(t=>t.IsCheck == false).ToListAsync(cancellationToken);//check servisi call edilmemiş kayıtlları alıyoruz. 
                 foreach (var invitee in invitees)
                 {
                     try
                     {
-                        await mailService.CheckAsync(invitee.MailId);
+                        var serviceResponse = await mailService.CheckAsync(invitee.MailId);
+                        if (serviceResponse.Id > 0)
+                        {
+                            invitee.MailId = serviceResponse.Id;
+                            invitee.IsEmailSent = serviceResponse.IsSent;
+                            invitee.IsCheck = true;
+                            dbContext.Update(invitee);
+                            await dbContext.SaveChangesAsync();
+                        }
                         _logger.LogInformation($"Checked status for {invitee.Email}");
                     }
                     catch (Exception ex)
